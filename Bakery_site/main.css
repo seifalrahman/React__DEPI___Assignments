@@ -1,0 +1,381 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: "Alegreya", serif;
+    font-optical-sizing: auto;
+    
+}
+
+.mainn{
+    width:100%;
+    height: 100vh;
+    background-image: url(images/drew-coffman-1872.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.navbar{
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    background-image: url("images/bakery-light-1.png");
+    background-repeat:no-repeat;
+    background-size: 18% 40%;
+    background-position: 4% center;
+    background-color: transparent;
+    border-bottom: 1px solid #ccc;
+    height: 16vh;
+    border-bottom: white solid ;
+    border-color:rgba(255, 255, 255, 0.2); ;
+    border-width: 1px;
+    width:100%;
+    
+    position: fixed;
+}
+
+.navbar a:first-child{
+    margin-left: 70%; 
+}
+.navbar a{
+    text-decoration: none;
+    
+    color :white ;
+    margin-left: 1%;
+}
+.link:hover{
+    color:#8f754f;
+}
+.welcome
+, .show_off{
+    color:rgba(255, 255, 255, .5);
+    font-size:23px ;
+    text-align: center;
+}
+
+
+.name {
+    padding-top:70px;
+    color:white;
+    text-align: center;
+    font-size: 89px;
+}
+.welcome{
+    padding-top:22vh ;
+    font-size:26px ;
+
+}
+.show_off{
+    padding-top: 20px;
+    
+}
+
+.learn{
+    background-color: #8f754f;
+    margin-right: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    color: white;
+    border:none;
+    border-radius: 4px;
+    font-size: 17px;
+}
+.buttons{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.contactUS{
+    font-size: 17px;
+    background-color: transparent;
+    margin-right: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    color: white;
+    border-radius: 4px;
+}
+.learn:hover{
+    background-color: white;
+    color:#8f754f ;
+    transition: 0.3s;
+}
+.contactUS:hover{
+    background-color: white;
+    color:#8f754f ;
+    transition: 0.3s;
+}
+.sidebar{
+    background-color: white;
+    width:40px;
+    top:30%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    right :0px;
+    position: fixed;
+    padding: 5px 5px 5px 5px;
+    
+}
+.sidebar img{
+    
+    width:100%;
+    
+    height: 30%;
+}
+
+
+.whoweare{
+    margin:70px 70px 70px  70px;
+    display: flex;
+    align-items: center;
+    line-height: 2;
+    width:90%;
+}
+.whoweare img{
+    margin-right: 50px;
+    width:50%;
+}
+
+.title{
+    font-weight: 500;
+    opacity: 0.85;
+    font-size: 45px;
+    
+}
+.correct
+,.people,
+.hearticon,.todolist{
+    font-size: 30px;
+    color:#8f754f;
+    font-weight: bold;
+}
+
+
+
+.location{
+    display: flex;
+    margin:70px 70px 70px  70px;
+    display: flex;
+    align-items: center;
+    line-height: 2;
+    width:90%;
+}
+.location img{
+    margin-right: 50px;
+    width:45%;
+}
+.location p{
+    margin-right: 30px;
+}
+
+
+
+.titleourbaking{
+    font-weight: 500;
+    opacity: 0.85;
+    font-size: 50px;
+    text-align: center;
+}
+.ourbaking{
+    display: flex;
+   
+    align-items: center;
+    margin: 90px auto;
+    text-align: center;
+    line-height: 25px;
+    
+
+}
+
+.item1,
+.item2,
+.item3{
+    align-items: center;
+    width: 33%;
+
+}
+
+.item1 img ,
+.item2 img ,
+.item3 img {
+    align-items: center;
+    
+    width:90%;
+    margin: 0 auto ;
+}
+.ContactInfo{
+    
+    display:flex;
+    
+    margin :70px 70px ;
+    justify-content: center;
+    align-items: center;
+}
+.ContactInfo p{
+    font-size: 18px;
+}
+.loc,
+.tel,
+.headset,
+.email
+{
+    color: #8f754f;
+    font-size: 25px;
+}
+.map{
+    
+    width:100%;
+}
+.bottomline{
+    background-color:rgb(64, 61, 56);
+    color:rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top:48px ;
+    padding-bottom: 48px;
+    display:flex;
+    
+    justify-content: space-between;
+    padding-right: 70px;
+    padding-left: 70px;
+    
+    
+}
+.whywearespecial,
+.openinghours,
+.contactdetails,
+.aboutus{
+    margin-right: 30px;
+    width: 25%;
+    
+}
+.bottomLinetitle{
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.dec{
+    border-bottom: white solid ;
+    border-color:rgba(255, 255, 255, 0.2); ;
+    border-width: 1px;
+    padding-bottom: 20px;
+}
+.contactdetails a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.5);
+}
+.demail,
+.dtel,
+.dloc,
+.dglobe{
+    font-size: 25px;
+}
+.last{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: rgb(52, 51, 47);
+    text-align: center;
+    color:rgba(255, 255, 255, 0.5);
+}
+.icons button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width:40px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+.last p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .ourbaking,
+    .location,
+    .whoweare,
+    .bottomline,
+    .ContactInfo{
+        flex-wrap: wrap;
+    }
+    .navbar a:first-child{
+        margin-left: 20%; 
+    }
+    
+  }
+  
+  @media screen and (max-width: 992px) {
+    .ourbaking,
+    .location,
+    .whoweare,
+    .bottomline,
+    .ContactInfo{
+        flex-wrap: wrap;
+    }
+    .navbar a:first-child{
+        margin-left: 40%; 
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .ourbaking,
+    .location,
+    .whoweare,
+    .bottomline,
+    .ContactInfo{
+        flex-wrap: wrap;
+        
+    }
+    .navbar a:first-child{
+        margin-left: 50%; 
+    }
+  }
+
+
+  .ballcontainer{
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    width: 40px;
+    height: 65px;
+    top:4vh;
+    left:48vw;
+  }
+  .ball{
+    position: relative;
+    background-color: #ccc;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    left:50%;
+    transform: translateX(-50%);
+    animation-name: animatebutton;
+    animation-duration: 2s;
+    animation-iteration-count: infinite ;
+    animation-timing-function: linear;
+  }
+
+  @keyframes animatebutton {
+    0%{
+      opacity: 0;
+      top:10%;
+    }
+    50%{
+      opacity:1 ;
+      top:50%;
+    }
+    100%{
+        opacity:0;
+        top:80%;
+    }
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
