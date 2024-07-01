@@ -31,12 +31,12 @@
 .navbar{
     z-index: 1;
     position: relative;
-    width:100%;
+    width:95%;
     padding-top: 3vh;
     display: flex;
     padding-bottom: 3vh;
     padding-left: 4vh;
-    padding-right: 4vh;
+    
     font-weight: 700;
 }
 .navbar p{
@@ -80,7 +80,7 @@
     white-space: nowrap;
     animation: control-width  3s steps(17) 0s  infinite,blink  0.5s infinite;
     animation-direction: alternate-reverse;
-    ;
+    
     
 }
 @keyframes control-width{
