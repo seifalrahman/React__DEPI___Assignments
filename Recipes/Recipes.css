@@ -1,0 +1,79 @@
+.nvbr{
+    background-color:#212529;
+    position: fixed;
+    width:100%;
+    z-index: 1;
+    
+}
+.nvnvbr{
+    width:87%;
+}
+.navbar-brand{
+    color: white;
+}
+
+.mainp{
+    background-image: url(images/home2.jpg);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Hide any overflow */
+    z-index: -2;
+    top: 0;
+    position: absolute;
+    background-size: cover ;
+    background-position: center;
+    
+}
+.layer{
+  
+    background-size:cover ;
+    background-color:rgba(0,0,0,0.7) ;
+    z-index: 0;
+    position: relative;
+    top :0px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+.layer div{
+    display: flex;
+    width:75% ;
+    gap:3vw;
+    margin-top:50vh ;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    
+}
+
+.txtfield1{
+    width:60%;
+}
+.srchbtn{
+    width:10%;
+    background-color: #198754;
+    border-color: #198754;
+    font-weight: 400;
+    line-height: 1.5;
+    border: 1px solid ;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.srchbtn:hover{
+    color: #fff;
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+
+
+.recipes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:90%;
+    background-color:#212529;
+}
