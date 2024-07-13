@@ -14,21 +14,21 @@ controlMenu.addEventListener("click",function(){
         menu.style.width='0';
         hiddenFlag=0;
     }else{
-        controlMenu.style.setProperty('color',"rgba(255,255,255,1)" ,"important");
         menu.style.width='33%' ;
         let listelements="" ;
         for(let i=0 ; i<options.length ;i++){
             listelements+=`
             <li class="py-3 ps-3 border-bottom fs-3" id="${options[i]}">
-                <div class="btn-layer-2" id="${i}"></div>
-                <p>${options[i]}</p></li>
+            <div class="btn-layer-2" id="${i}"></div>
+            <p>${options[i]}</p></li>
             </li>
             ` ;
             
             
-
+            
         }
         menulist.innerHTML=listelements;
+        controlMenu.style.setProperty('color',"rgba(255,255,255,1)" ,"important");
         hiddenFlag=1;
 
         // for(let i=0 ; i< options.length ;i++){
@@ -85,5 +85,5 @@ menu.addEventListener('click', function(e){
     if(e.target.innerText != ''){
         getApi(e.target.innerText)
     }
-    menu.style.left = '-100%';
+    menu.style.width= '0';
 })
