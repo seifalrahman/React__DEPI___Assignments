@@ -77,3 +77,13 @@
     width:90%;
     background-color:#212529;
 }
+
+
+
+.menuu{
+    top:0;
+    z-index: 5;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+    height: 100vh;
+}
