@@ -2,7 +2,7 @@
     background-color:#212529;
     position: fixed;
     width:100%;
-    z-index: 1;
+    z-index: 2;
     
 }
 .nvnvbr{
@@ -15,9 +15,9 @@
 .mainp{
     background-image: url(images/home2.jpg);
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden; /* Hide any overflow */
-    z-index: -2;
+    z-index: 1;
     top: 0;
     position: absolute;
     background-size: cover ;
@@ -44,6 +44,7 @@
     margin-top:50vh ;
     margin-left: 20vw;
     margin-right: 20vw;
+    overflow: hidden;
     
 }
 
@@ -71,12 +72,6 @@
 
 
 
-.recipes{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width:90%;
-    background-color:#212529;
-}
 
 
 
@@ -86,4 +81,54 @@
     overflow-y: auto;
     transition: all 0.3s ease-in-out;
     height: 100vh;
+    width: 0;
+}
+
+
+.btn-layer-2{
+    height: 100%;
+    width: 0%;
+    background-color: rgba(255,255,255,1);
+    background-size: 100% 100%;
+    position:absolute; 
+    top:0;
+    left:0;
+    z-index:-1;
+    
+    
+    
+}
+.lll:hover .btn-layer-2{
+   
+    animation: control-width  1s  ;
+}
+@keyframes control-width{
+    from{
+        width:0%;
+    }
+    to{
+        width:100%;
+        
+    }
+    
+    
+ 
+}
+
+
+.recipes{
+    
+    justify-content: space-between; 
+    margin:0 auto ;
+    padding-right: 5%;
+    padding-left: 5%;
+    width:100%  !important;
+    background-color:#212529;
+    position: relative;
+    top:100vh;
+    
+}
+.resipe-img img{
+    height: 250px;
+    object-fit: cover;
 }
