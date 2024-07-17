@@ -61,6 +61,7 @@ body{
     border-radius:12px ;
     justify-content:space-around;
     z-index: 1;
+    transition: all 0.5s ;
     /*left :43vh;*/
 }
 
@@ -93,6 +94,7 @@ body{
     margin:auto auto;
     color:rgba(255,255,255,0.7);
     display: none;
+    
 }
 .sidebar{
     display: flex;
@@ -167,7 +169,14 @@ body{
 
 .imagee{
     width: 100%;
+    
 }
 .imgdiv{
     margin: 8px;
+    
+}
+
+
+.bigsidebartxt p{
+    cursor: pointer;
 }
