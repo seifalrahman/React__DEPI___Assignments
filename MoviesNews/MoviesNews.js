@@ -10,29 +10,51 @@ let topRated        =  document.getElementById("TopR");
 let trending        =  document.getElementById("trend");
 let upcoming        =  document.getElementById("coming");
 let contactUs       =  document.getElementById("ContactUs");
+let title           =  document.getElementById("titlee");
+let srchbr          =  document.getElementById("srchbr");
+srchbr.addEventListener("input", function(event){
+    console.log("entered");
+    let query=event.target.value.trim();
+    if(query.length>2){
+        moviesGallery="";
+        title.innerText="Search Results";
+        request("https://api.themoviedb.org/3/search/movie?query="+query+"&api_key="+API_Key);
+        if(moviesGallery.length===0){
+            //*********************CONTINUE**********************888 */
+        }
+    }
+    
+
+})
 
 
 nowPlaying.addEventListener("click",function(){
     moviesGallery="";
+    
     request(nowPlayingMoviesEndpoint) ;
+    title.innerText="Now Playing";
 })
 
 popular.addEventListener("click" ,function(){
     moviesGallery="";
     request(popularMoviesEndpoint) ;
+    title.innerText="Popular Movies";
 })
 
 topRated.addEventListener("click",function(){
     moviesGallery="";
     request(topRatedMoviesEndpoint) ;
+    title.innerText="Top Rated";
 })
 trending.addEventListener("click",function(){
     moviesGallery="";
     request(trendingMoviesEndpoint) ;
+    title.innerText="Trending";
 })
 upcoming.addEventListener("click",function(){
     moviesGallery="";
     request(upcomingMoviesEndpoint) ;
+    title.innerText="Upcoming Movies";
 })
 
 
@@ -102,7 +124,7 @@ function request(URL) {
                 imgentities[imgentities.length - 1 ].addEventListener("mouseenter" ,function(){
                     for(let j =0 ; j<(data.results).length;j++ ){
                         if(data.results[j].id===imgids[i]){
-
+                            
                             imgentities[j].src=`https://image.tmdb.org/t/p/w500${data.results[j].backdrop_path}` ;
                             pentities[j].innerText=data.results[j].overview;
                             pentities[j].style.color="rgba(255,255,255,0.7)";
