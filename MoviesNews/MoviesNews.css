@@ -181,3 +181,35 @@ body{
 .bigsidebartxt p{
     cursor: pointer;
 }
+
+
+.RTH{
+
+    background-color: var(--changeable-color);
+    border: none;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+.RTHdiv{
+   
+    margin: 0 auto;
+    width: 25%;
+    margin-bottom: 50px;
+    
+   
+
+}
+
+
+
+
+.form-control{
+    color:var(--changeable-color);
+}
+
+
+.ss{
+    color: red;
+}
