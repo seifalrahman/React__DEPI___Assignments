@@ -12,16 +12,105 @@ let upcoming        =  document.getElementById("coming");
 let contactUs       =  document.getElementById("ContactUs");
 let title           =  document.getElementById("titlee");
 let srchbr          =  document.getElementById("srchbr");
+
+/*************************************************************************************************************************/
+let nameerr         =  document.getElementById("nametxterr");
+let emailerr        =  document.getElementById("emailtxterr");
+let phoneerr        =  document.getElementById("phonetxterr");
+let ageerr          =  document.getElementById("agetxterr");
+let passworderr     =  document.getElementById("passwordtxterr");
+let validateerr     =  document.getElementById("validatetxterr");
+
+let namebox         =  document.getElementById("namebox") ;
+let emailbox        =  document.getElementById("emailbox") ;
+let phonebox        =  document.getElementById("phonebox") ;
+let agebox          =  document.getElementById("agebox") ;
+let passwordbox     =  document.getElementById("passwordbox") ;
+let validatebox     =  document.getElementById("validatebox") ;
+
+
+let submitbtn       =  document.getElementById("submitid");
+let nameProhibitedchars =['1','2','3','4','5','6','7','8','9','0','%','#','@','!','&','$','*','+','-','=','/','<','>','?'];
+let emailallowedservices=["@gmail.com","@yahoo.com","@hotmail.com"] ;
+submitbtn.addEventListener("click" ,function(){
+    //******************************8 */
+    let nameflag=0;
+    nameProhibitedchars.forEach(subString => {
+
+        if (namebox.value.includes(subString)) {
+            nameerr.innerText="It contains prohibited characters";
+            namebox.style.border="red 1px solid";
+            nameflag=1;
+        } 
+    });
+    if(!nameflag){
+        nameerr.innerText="";
+        namebox.style.border="none";
+    }
+
+    let eflag=0;
+    emailallowedservices.forEach(sub=>{
+        if(emailbox.value.includes(sub)){
+            eflag=1;
+        }
+    })
+    if(!eflag){
+        emailerr.innerText="Invalid Email" ;
+        emailbox.style.border="red 1px solid";
+    }else{
+        emailerr.innerText="" ;
+        emailbox.style.border="none";
+    }
+
+
+    if(phonebox.value.length!=12){
+        phoneerr.innerText="Invalid Number, It must be 12 digits";
+        phonebox.style.border="red 1px solid";
+    }else{
+        phoneerr.innerText="";
+        phonebox.style.border="none";
+
+    }
+    if(!(Number(agebox.value)>0 &&Number(agebox.value)<170  )){
+        ageerr.innerText="Invalid Age" ;
+        agebox.style.border="red 1px solid";
+    }else{
+        ageerr.innerText="" ;
+        agebox.style.border="none";
+    }
+    if(!(passwordbox.value.length>10)){
+        passworderr.innerText="Easy password  it must be larger than 10 characters";
+        passwordbox.style.border="red 1px solid";
+    }else{
+        passworderr.innerText="";
+        passwordbox.style.border="none";
+
+    }
+
+    if(passwordbox.value!==validatebox.value){
+        validateerr.innerText="Passwords are not matching" ;
+        validatebox.style.border="red 1px solid";
+
+    }else{
+        validateerr.innerText="" ;
+        validatebox.style.border="none";
+
+    }
+
+
+
+
+})
+
 srchbr.addEventListener("input", function(event){
     console.log("entered");
     let query=event.target.value.trim();
     if(query.length>2){
+        
         moviesGallery="";
         title.innerText="Search Results";
         request("https://api.themoviedb.org/3/search/movie?query="+query+"&api_key="+API_Key);
-        if(moviesGallery.length===0){
-            //*********************CONTINUE**********************888 */
-        }
+        
     }
     
 
@@ -101,6 +190,7 @@ function request(URL) {
             return response.json();
         })
         .then(data => {
+            
             imgids=[];
             pentities=[];
             imgentities=[];
@@ -117,6 +207,19 @@ function request(URL) {
             });
 
             movies.innerHTML=moviesGallery;
+            movies.style.display="grid";
+            if(data.total_results===0){
+                movies.innerHTML=`<div class="RTHdiv" id="RTHdivv">
+                <button class="RTH"id="ReturnToHome">Return to Home</button>
+            </div>`;
+                movies.style.display="block";
+                
+                let RTHbtn          =  document.getElementById("ReturnToHome") ;
+                RTHbtn.addEventListener("click",function(){
+                    request(popularMoviesEndpoint);
+                    srchbr.innerText="";
+                })
+            }
             for (let i =0 ; i<imgids.length ;i++ ){
                 imgentities.push(document.getElementById(`${imgids[i]}`));
                 pentities.push(document.getElementById("p"+imgids[i])) ;
